@@ -1,0 +1,759 @@
+Model {
+  Name			  "CD1_CityDrain_Library_outdated"
+  Version		  5.0
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  on
+  ExecutionOrder	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  on
+  Created		  "Tue Mar 09 11:34:14 2004"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "c81523"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Jun 13 10:57:32 2005"
+  ModelVersionFormat	  "1.%<AutoIncrement:217>"
+  ConfigurationManager	  "None"
+  SimParamPage		  "Solver"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  RTWExpressionDepthLimit 5
+  SimulationMode	  "normal"
+  Solver		  "FixedStepDiscrete"
+  SolverMode		  "Auto"
+  StartTime		  "0"
+  StopTime		  "36000"
+  MaxOrder		  5
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "300"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  Refine		  "1"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveTime		  on
+  TimeSaveName		  "cd_time"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  Decimation		  "1"
+  LimitDataPoints	  off
+  MaxDataPoints		  "1000"
+  SignalLoggingName	  "sigsOut"
+  ConsistencyChecking	  "none"
+  ArrayBoundsChecking	  "none"
+  AlgebraicLoopMsg	  "warning"
+  BlockPriorityViolationMsg "warning"
+  MinStepSizeMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  DiscreteInheritContinuousMsg "warning"
+  MultiTaskRateTransMsg	  "error"
+  SingleTaskRateTransMsg  "none"
+  CheckForMatrixSingularity "none"
+  IntegerOverflowMsg	  "warning"
+  Int32ToFloatConvMsg	  "warning"
+  ParameterDowncastMsg	  "error"
+  ParameterOverflowMsg	  "error"
+  ParameterPrecisionLossMsg "warning"
+  UnderSpecifiedDataTypeMsg "none"
+  UnnecessaryDatatypeConvMsg "none"
+  VectorMatrixConversionMsg "none"
+  InvalidFcnCallConnMsg	  "error"
+  SignalLabelMismatchMsg  "none"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  SfunCompatibilityCheckMsg "none"
+  RTWInlineParameters	  off
+  BlockReductionOpt	  on
+  BooleanDataType	  on
+  ConditionallyExecuteInputs on
+  ParameterPooling	  on
+  OptimizeBlockIOStorage  on
+  ZeroCross		  on
+  AssertionControl	  "UseLocalSettings"
+  ProdHWDeviceType	  "Microprocessor"
+  ProdHWWordLengths	  "8,16,32,32"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  RTWRetainRTWFile	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  TLCAssertion		  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      FromWorkspace
+      VariableName	      "simulink_input"
+      SampleTime	      "-1"
+      Interpolate	      on
+      OutputAfterFinalValue   "Extrapolation"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      PortCounts	      "[]"
+      SFunctionModules	      "''"
+    }
+    Block {
+      BlockType		      Stop
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "CD1_CityDrain_Library_outdated"
+    Location		    [398, 184, 1249, 886]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "CD Parameters"
+      Ports		      []
+      Position		      [60, 20, 268, 73]
+      BackgroundColor	      "green"
+      FontName		      "Arial"
+      FontSize		      12
+      FontWeight	      "bold"
+      TreatAsAtomicUnit	      off
+      MaskType		      "City Drain 1.0 - Simulation parameters "
+      MaskDescription	      "Block that sets the global parameters required "
+"in City Drain 1.0. Following paramters are set without user's input:\n\n- 'So"
+"lver' --> 'FixedStepDiscrete'\n- 'TimeSaveName' --> 'cd_time'\n- 'Decimation'"
+" --> '1'\n- 'LimitDataPoints' -->  'off'"
+      MaskPromptString	      "Sampling Time [s]|Start Time [s]|Stop Time [s]"
+      MaskStyleString	      "edit,edit,edit"
+      MaskTunableValueString  "on,on,on"
+      MaskCallbackString      "||"
+      MaskEnableString	      "on,on,on"
+      MaskVisibilityString    "on,on,on"
+      MaskToolTipString	      "on,on,on"
+      MaskVarAliasString      ",,"
+      MaskVariables	      "t_step=@1;t_start=@2;t_stop=@3;"
+      MaskInitialization      "% toplevel systems' name --> Plant file name;\n"
+"tls=bdroot(gcb); \nset_param(tls, 'Solver', 'FixedStepDiscrete'); \nset_param"
+"(tls, 'TimeSaveName', 'cd_time');\nset_param(tls, 'Decimation', '1');\nset_pa"
+"ram(tls, 'LimitDataPoints', 'off');\nset_param(tls, 'ScreenColor', 'white');"
+"\n\ntstep_char=num2str(t_step); % Setting the discrete time step\nset_param(t"
+"ls, 'FixedStep', tstep_char); \n\ntstart_char=num2str(t_start); % Setting the"
+" start time\nset_param(tls, 'StartTime', tstart_char); \n\ntstop_char=num2str"
+"(t_stop); % Setting the stop time\nset_param(tls, 'StopTime', tstop_char); "
+      MaskDisplay	      "\nplot(0,0,100,100);\n\ntext(50,65,'CITY DRAIN'"
+",'HorizontalAlignment','center');\ntext(50,35,'PARAMETERS','HorizontalAlignme"
+"nt','center');\n\n\nimage(imread('CityDrain_SimParam.jpg'))\n\n"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "300|0|36000"
+      System {
+	Name			"CD Parameters"
+	Location		[555, 438, 1070, 628]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "CD_RAINREAD_ixx"
+      Ports		      [0, 1]
+      Position		      [50, 474, 145, 526]
+      BackgroundColor	      "orange"
+      ShowPortLabels	      off
+      TreatAsAtomicUnit	      off
+      MaskType		      "Rain Read: ixx-format"
+      MaskDescription	      "Read raindata from ASCII File in ixx format. \n"
+"\nTimesteps in the data must match the simulation time steps !!\n\nUsed funct"
+"ion:\nCD1_mfun_rainread_ixx.m"
+      MaskPromptString	      "Inputfile"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "file0=@1;"
+      MaskInitialization      "% reading the toplevel systems' name \n% --> Pl"
+"ant file name;\ntls=bdroot(gcb); \n% Obtaining the fixed sampling time\nt_sam"
+"p_char=get_param(tls, 'FixedStep');\n% Convertion to numeric value\nt_sample "
+"= str2num(t_samp_char); \n"
+      MaskDisplay	      "plot(0,0,100,100);\ntext(35,75,'ixx-format');\n"
+"text(60,40,'RAIN');\ntext(60,20,'READ');\n\nplot(\n[5 10 10 15 15 20 20 25 25"
+" 30 30 40 40 45],\n[0 0 20 20 40 40 60 60 30 30 0 0 0 0]+20);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "'Rain_ixx_1980_2m_summer.ixx'"
+      System {
+	Name			"CD_RAINREAD_ixx"
+	Location		[574, 421, 1168, 915]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  FromWorkspace
+	  Name			  "From Block  (inherited)"
+	  Position		  [45, 27, 240, 53]
+	  VariableName		  "CD1_mfun_rainread_ixx_old(file0)"
+	  SampleTime		  "t_sample"
+	  OutputAfterFinalValue	  "Setting to zero"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "out_1"
+	  Position		  [375, 30, 415, 50]
+	}
+	Line {
+	  SrcBlock		  "From Block  (inherited)"
+	  SrcPort		  1
+	  DstBlock		  "out_1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "CD_RAINREAD_mse"
+      Ports		      [0, 1]
+      Position		      [50, 390, 145, 440]
+      BackgroundColor	      "orange"
+      TreatAsAtomicUnit	      off
+      MaskType		      "RainRead: mse-format"
+      MaskDescription	      "Reads rain data from the specified  file in mse"
+" - format (modified DHI Mouse format).\nPrecipitation given in [1000*mm/sec] "
+"is converted to discrete volumetric values in [mm/timestep]. Simulation is st"
+"opped with last recorded precipitation. \n\nTimesteps in the data must match "
+"the simulation time steps !!\n\nRequired time steps for sampling are inherite"
+"d from global setting. "
+      MaskPromptString	      "File Name 'Raindata.mse'"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "filename=@1;"
+      MaskInitialization      "% reading the toplevel systems' name \n% --> Pl"
+"ant file name;\ntls=bdroot(gcb); \n% Obtaining the fixed sampling time\nt_sam"
+"p_char=get_param(tls, 'FixedStep');\n% Convertion to numeric value\ntstep = s"
+"tr2num(t_samp_char); "
+      MaskDisplay	      "plot(0,0,100,100);\ntext(35,75,'mse-format');\n"
+"text(60,40,'RAIN');\ntext(60,20,'READ');\n\nplot(\n[5 10 10 15 15 20 20 25 25"
+" 30 30 40 40 45],\n[0 0 20 20 40 40 60 60 30 30 0 0 0 0]+20);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "'Rain_mse_1981.mse'"
+      System {
+	Name			"CD_RAINREAD_mse"
+	Location		[511, 384, 998, 563]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 2]
+	  Position		  [185, 26, 190, 64]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  Outputs		  "2"
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "S-Function"
+	  Ports			  [0, 1]
+	  Position		  [25, 29, 160, 61]
+	  FunctionName		  "CD1_sfun_rainread_mse_old"
+	  Parameters		  "filename,tstep"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Stop
+	  Name			  "Stop Simulation"
+	  Position		  [220, 67, 255, 103]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Output Signal: mm/timestep"
+	  Position		  [265, 28, 295, 42]
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Output Signal: mm/timestep"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [10, 0]
+	  DstBlock		  "Stop Simulation"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S-Function"
+	  SrcPort		  1
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "CD_flowread_Q"
+      Ports		      [0, 1]
+      Position		      [50, 224, 145, 276]
+      BackgroundColor	      "orange"
+      ShowPortLabels	      off
+      TreatAsAtomicUnit	      off
+      MaskType		      "CD1_mfun_flowread_Q.m"
+      MaskDescription	      "Reads flowdata (Q) from ascii file. \n\nTimeste"
+"ps in the data must match the simulation time steps !!\n\nUsed function: CD1_"
+"mfun_flowread_Q.m"
+      MaskPromptString	      "File cotaining matrix of hydrograph"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "table0=@1;"
+      MaskInitialization      "table=CD1_mfun_flowread_Q_old(table0); \nh=size"
+"(table);m=max(table(:,h(2)));\nn=min(table(:,h(2)))/(m+eps);x=max(table(:,1))"
+";\nz=1.643;\n\n% reading the toplevel systems' name \n% --> Plant file name;"
+"\ntls=bdroot(gcb); \n% Obtaining the fixed sampling time\nt_samp_char=get_par"
+"am(tls, 'FixedStep');\n% Convertion to numeric value\nt_sample = str2num(t_sa"
+"mp_char); "
+      MaskDisplay	      "plot(-x/z*0.1,(n-0.2)*m,x+x/z*0.1,m+m/10,table("
+":,1),table(:,h(2)),x/z*[-0.1,0.05],[n*m,(n-0.2)*m])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "'Input_Flow_Q_01.txt'"
+      System {
+	Name			"CD_flowread_Q"
+	Location		[595, 421, 1189, 915]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  FromWorkspace
+	  Name			  "From\nBlock(inherited)"
+	  Position		  [45, 28, 110, 52]
+	  VariableName		  "table"
+	  SampleTime		  "t_sample"
+	  Interpolate		  off
+	  OutputAfterFinalValue	  "Setting to zero"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "out_1"
+	  Position		  [145, 30, 165, 50]
+	}
+	Line {
+	  SrcBlock		  "From\nBlock(inherited)"
+	  SrcPort		  1
+	  DstBlock		  "out_1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "CD_flowread_QC"
+      Ports		      [0, 1]
+      Position		      [50, 304, 145, 356]
+      BackgroundColor	      "orange"
+      ShowPortLabels	      off
+      TreatAsAtomicUnit	      off
+      MaskType		      " CD1_mfun_flowread_QC"
+      MaskDescription	      "Reads flowdata (Q) and substance concentration "
+"(Ci) associated from ascii file. \n\nTimesteps in the data must match the sim"
+"ulation time steps !!\n\nUsed function: CD1_mfun_flowread_QC.m"
+      MaskPromptString	      "Filename|Number of pollutants n"
+      MaskStyleString	      "edit,edit"
+      MaskTunableValueString  "on,on"
+      MaskCallbackString      "|"
+      MaskEnableString	      "on,on"
+      MaskVisibilityString    "on,on"
+      MaskToolTipString	      "on,on"
+      MaskVarAliasString      ","
+      MaskVariables	      "table0=@1;n_comp=@2;"
+      MaskInitialization      "table=CD1_mfun_flowread_QC_old(table0,n_comp);"
+"\n\nh=size(table);m=max(table(:,h(2)));\nn=min(table(:,h(2)))/(m+eps);x=max(t"
+"able(:,1));\nz=1.643;\n\n% reading the toplevel systems' name \n% --> Plant f"
+"ile name;\ntls=bdroot(gcb); \n% Obtaining the fixed sampling time\nt_samp_cha"
+"r=get_param(tls, 'FixedStep');\n% Convertion to numeric value\nt_sample = str"
+"2num(t_samp_char); "
+      MaskDisplay	      "\nplot(0,0,100,100);\n\ntext(20,30,'Flowread');"
+"\n\ntext(20,10,'Q and C');\n\n\nplot(\n[5 20 20 30 30 40 40 50 50 60 60 70 70"
+" 70],\n[0 0 10 10 20 20 40 40 20 20 0 0 0 0]+60);\nplot(\n[5 20 20 30 30 40 4"
+"0 50 50 60 60 70 70 70],\n[0 0 10 10 20 20 30 30 10 10 0 0 0 0]+40);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "'Input_Flow_QC_01.txt'|1"
+      System {
+	Name			"CD_flowread_QC"
+	Location		[595, 421, 1189, 915]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  FromWorkspace
+	  Name			  "From\nBlock(inherited)"
+	  Position		  [45, 28, 110, 52]
+	  VariableName		  "table"
+	  SampleTime		  "t_sample"
+	  Interpolate		  off
+	  OutputAfterFinalValue	  "Setting to zero"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "out_1"
+	  Position		  [145, 30, 165, 50]
+	}
+	Line {
+	  SrcBlock		  "From\nBlock(inherited)"
+	  SrcPort		  1
+	  DstBlock		  "out_1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "FLOWREAD_old"
+      Ports		      [0, 1]
+      Position		      [205, 229, 300, 281]
+      BackgroundColor	      "orange"
+      ShowPortLabels	      off
+      TreatAsAtomicUnit	      off
+      MaskType		      "CD1_flowread"
+      MaskDescription	      "Reads flowdata (Q) and substance concentration "
+"(Ci) associated from ascii file. \n\nUsed function: CD1_sfun_flowread.m"
+      MaskPromptString	      "Filename|Data type|Cylic repitation"
+      MaskStyleString	      "edit,popup(Composite sample|Grab sample),checkb"
+"ox"
+      MaskTunableValueString  "on,on,on"
+      MaskCallbackString      "||"
+      MaskEnableString	      "on,on,on"
+      MaskVisibilityString    "on,on,on"
+      MaskToolTipString	      "on,on,on"
+      MaskVarAliasString      ",,"
+      MaskVariables	      "table0=@1;dtype=&2;crep=&3;"
+      MaskInitialization      "table=CD1_mfun_flowread(table0);\n\n\n% reading"
+" the toplevel systems' name \n% --> Plant file name;\ntls=bdroot(gcb); \n% Ob"
+"taining the fixed sampling time\nt_samp_char=get_param(tls, 'FixedStep');\n% "
+"Convertion to numeric value\ntstep = str2num(t_samp_char); \n"
+      MaskDisplay	      "\nplot(0,0,100,100);\n\ntext(50,20,'FLOWREAD_ol"
+"d','HorizontalAlignment','center');\n\nplot(\n[5 10 10 15 15 20 20 25 25 30 3"
+"0 35 35 40],\n[0 0 10 10 20 20 40 40 20 20 0 0 0 0]+50);\nplot(\n[5 10 15 20 "
+"25 30 35 ]+50,\n[0 5 10 15 30 20 0]+50);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "'Input_CSO_QC_Test_3.txt'|Grab sample|on"
+      System {
+	Name			"FLOWREAD_old"
+	Location		[88, 454, 682, 948]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "SEWER TL Model1"
+	  Ports			  [0, 1]
+	  Position		  [45, 54, 170, 86]
+	  FunctionName		  "CD1_sfun_flowread_old"
+	  Parameters		  "dtype,crep,table,tstep"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "out_1"
+	  Position		  [250, 60, 270, 80]
+	}
+	Line {
+	  SrcBlock		  "SEWER TL Model1"
+	  SrcPort		  1
+	  DstBlock		  "out_1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "LOGO"
+      Ports		      []
+      Position		      [545, 32, 743, 136]
+      ForegroundColor	      "white"
+      TreatAsAtomicUnit	      off
+      MaskType		      "LOGO CITY DRAIN"
+      MaskDescription	      "Displays the City Drain Logo in Color\n\nSource"
+" file: \nCity Drain Logo_c_small.tif"
+      MaskHelp		      "Displays the City Drain Logo in Color\n\nSource"
+" file: \nCity Drain Logo_c_small.tif"
+      MaskDisplay	      "image(imread('CityDrainLogo_C1.jpg'));\ntext(10"
+",50,'CITY DRAIN 1.0','HorizontalAlignment','left');\ntext(10,20,'Logo could n"
+"ot be displayed','HorizontalAlignment','left');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"LOGO"
+	Location		[230, 112, 1254, 932]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "LOGO1"
+      Ports		      []
+      Position		      [444, 13, 528, 135]
+      ForegroundColor	      "white"
+      TreatAsAtomicUnit	      off
+      MaskType		      "LOGO CITY DRAIN"
+      MaskDescription	      "Displays the City Drain Logo in Color\n\nSource"
+" file: \nCityDrainLogo_C1.jpg"
+      MaskDisplay	      "image(imread('LOGO_IUT4C.jpg'));\ntext(10,50,'I"
+"UT, University of Innsbruck','HorizontalAlignment','left');\ntext(10,20,'Logo"
+" could not be displayed','HorizontalAlignment','left');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"LOGO1"
+	Location		[230, 112, 1254, 932]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+      }
+    }
+    Annotation {
+      Name		      "TOOLS"
+      Position		      [738, 193]
+      DropShadow	      on
+      FontName		      "Arial"
+      FontSize		      12
+      FontWeight	      "bold"
+    }
+    Annotation {
+      Name		      "SOURCE"
+      Position		      [78, 193]
+      DropShadow	      on
+      FontName		      "Arial"
+      FontSize		      12
+      FontWeight	      "bold"
+    }
+    Annotation {
+      Name		      "RIVER"
+      Position		      [573, 193]
+      DropShadow	      on
+      FontName		      "Arial"
+      FontSize		      12
+      FontWeight	      "bold"
+    }
+    Annotation {
+      Name		      "CATCHMENT\nSEWER"
+      Position		      [248, 193]
+      DropShadow	      on
+      FontName		      "Arial"
+      FontSize		      12
+      FontWeight	      "bold"
+    }
+    Annotation {
+      Name		      "OUTDATED FUNCTIONS"
+      Position		      [198, 128]
+      BackgroundColor	      "yellow"
+      DropShadow	      on
+      FontName		      "Arial Black"
+      FontSize		      20
+      FontWeight	      "bold"
+    }
+  }
+}

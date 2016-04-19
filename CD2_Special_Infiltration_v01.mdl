@@ -1,0 +1,1250 @@
+Model {
+  Name			  "CD2_Infiltration_v01"
+  Version		  6.4
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.16"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  on
+  Created		  "Tue Feb 14 18:51:12 2006"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "c81523"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Jan 18 11:33:35 2007"
+  ModelVersionFormat	  "1.%<AutoIncrement:16>"
+  ConfigurationManager	  "None"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ProdHWDeviceType	  "32-bit Generic"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.2.0"
+      Array {
+	Type			"Handle"
+	Dimension		7
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.2.0"
+	  StartTime		  "0"
+	  StopTime		  "12000"
+	  AbsTol		  "auto"
+	  FixedStep		  "300"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "FixedStepDiscrete"
+	  SolverName		  "FixedStepDiscrete"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  RateTranMode		  "Deterministic"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.2.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  off
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "cd_time"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "sigsOut"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    5
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "InitFltsAndDblsToZero"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.2.0"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  ParameterPooling	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.2.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "TryResolveAllWithWarning"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "none"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "warning"
+	  MultiTaskCondExecSysMsg "none"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  ModelReferenceSimTargetVerbose off
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StrictBusMsg		  "None"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.2.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  on
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.2.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  8
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "IncludeHyperlinkInReport"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.2.0"
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      9
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.2.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      PrefixModelToSubsysFcnNames on
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      10
+	      Array {
+		Type			"Cell"
+		Dimension		13
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.2.0"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      GenFloatMathFcnCalls    "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      IncludeERTFirstTime     on
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      SimulationMode	      "normal"
+      CurrentDlgPage	      "Solver"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "sfix(16)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "2^0"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      VariableName	      "simulink_output"
+      MaxDataPoints	      "1000"
+      Decimation	      "1"
+      SampleTime	      "0"
+      FixptAsFi		      off
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "CD2_Infiltration_v01"
+    Location		    [330, 246, 1215, 818]
+    Open		    on
+    ModelBrowserVisibility  on
+    ModelBrowserWidth	    197
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "CD Parameters"
+      Ports		      []
+      Position		      [65, 35, 236, 84]
+      BackgroundColor	      "green"
+      FontName		      "Arial"
+      FontSize		      12
+      FontWeight	      "bold"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      MaskType		      "City Drain 1.0 - Simulation parameters "
+      MaskDescription	      "Block that sets the global parameters required "
+"in City Drain 1.0. Following paramters are set without user's input:\n\n- 'So"
+"lver' --> 'FixedStepDiscrete'\n- 'TimeSaveName' --> 'cd_time'\n- 'Decimation'"
+" --> '1'\n- 'LimitDataPoints' -->  'off'"
+      MaskPromptString	      "Sampling Time [s]|Start Time [s]|Stop Time [s]"
+      MaskStyleString	      "edit,edit,edit"
+      MaskTunableValueString  "on,on,on"
+      MaskCallbackString      "||"
+      MaskEnableString	      "on,on,on"
+      MaskVisibilityString    "on,on,on"
+      MaskToolTipString	      "on,on,on"
+      MaskVarAliasString      ",,"
+      MaskVariables	      "t_step=@1;t_start=@2;t_stop=@3;"
+      MaskInitialization      "% toplevel systems' name --> Plant file name;\n"
+"tls=bdroot(gcb); \nset_param(tls, 'Solver', 'FixedStepDiscrete'); \nset_param"
+"(tls, 'TimeSaveName', 'cd_time');\nset_param(tls, 'Decimation', '1');\nset_pa"
+"ram(tls, 'LimitDataPoints', 'off');\nset_param(tls, 'ScreenColor', 'white');"
+"\n\ntstep_char=num2str(t_step); % Setting the discrete time step\nset_param(t"
+"ls, 'FixedStep', tstep_char); \n\ntstart_char=num2str(t_start); % Setting the"
+" start time\nset_param(tls, 'StartTime', tstart_char); \n\ntstop_char=num2str"
+"(t_stop); % Setting the stop time\nset_param(tls, 'StopTime', tstop_char); "
+      MaskDisplay	      "\nplot(0,0,100,100);\n\ntext(50,65,'CITY DRAIN'"
+",'HorizontalAlignment','center');\ntext(50,35,'PARAMETERS','HorizontalAlignme"
+"nt','center');\n\n\nimage(imread('CityDrain_SimParam.jpg'))\n\n"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "300|0|12000"
+      MaskTabNameString	      ",,"
+      System {
+	Name			"CD Parameters"
+	Location		[555, 438, 1070, 628]
+	Open			off
+	ModelBrowserVisibility	on
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Infiltration"
+      Ports		      [1, 2]
+      Position		      [295, 275, 400, 355]
+      BackgroundColor	      "lightBlue"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      MaskType		      "ATV 138 - Dynamic Infiltration"
+      MaskDescription	      "Infiltration block\nDynamic swale infiltration "
+"according to ATV 138. Infiltration rates and swale volume is design according"
+" to ATV 138. \nBlock used r[mm/DT] as input and output. Thus the block is des"
+"igned as \"pre-block\" to catchment type blocks entering at rain input.\n\nFu"
+"nction used:\nNo other specific functions used than standard city drain funct"
+"ions."
+      MaskPromptString	      "Ared [ha] - Reduced (flow contributing areas|ph"
+"i [ - ] - Portion of infiltrated area Ared/(Au+As)|kf [m/s] - permiability of"
+" swale's soil material |As/Au [ 0.1 - 0.2 ] - Ratio of swale area (As) to con"
+"nected Area (Au)|rD(n) [l/(s.ha)] - Design rain intensity of the swale|D [min"
+"] - Duration of design rain rD(n)|fz [-] - Loading coefficient (ATV A117)"
+      MaskStyleString	      "edit,edit,edit,edit,edit,edit,edit"
+      MaskTunableValueString  "on,on,on,on,on,on,on"
+      MaskCallbackString      "||||||"
+      MaskEnableString	      "on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on"
+      MaskVarAliasString      ",,,,,,"
+      MaskVariables	      "Ared=@1;phiinf=@2;kf=@3;Rsu=@4;rDn=@5;D=@6;fz=@"
+"7;"
+      MaskInitialization      "% reading the toplevel systems' name \n% --> Pl"
+"ant file name;\ntls=bdroot(gcb); \n% Obtaining the fixed sampling time\nt_sam"
+"p_char=get_param(tls, 'FixedStep');\n% Convertion to numeric value\ntstep = s"
+"tr2num(t_samp_char); \n\n% Calculations for Infiltration\nAsu=Ared.*phiinf; "
+"	% in [ha]\n\nAu=Asu./(1+Rsu); 	% in [ha]\nAs=Asu-Au;	"
+"		% in [ha]\n\nqs=As.*10000.*kf./2; % [m3/s]\nV=((Au+As).*10000"
+".*10.^(-7).*rDn-qs).*D.*60.*fz; % [m3]\n"
+      MaskDisplay	      "\nplot(0,0,100,100);\n\n\ntext(50,60,'INF','Hor"
+"izontalAlignment','center');\ntext(50,40,'ATV','HorizontalAlignment','center'"
+");\ntext(50,20,'138','HorizontalAlignment','center');\n\nport_label('input',1"
+",'rin');\nport_label('output',1,'rw');\nport_label('output',2,'rinf');\n\n"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "100|0.2|0.00005|0.1|131.7|30|1.2"
+      MaskTabNameString	      ",,,,,,"
+      System {
+	Name			"Infiltration"
+	Location		[393, 176, 1244, 764]
+	Open			off
+	ModelBrowserVisibility	on
+	ModelBrowserWidth	157
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "rin[mm/DT]"
+	  Position		  [80, 283, 110, 297]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "CSO_QC_v1"
+	  Ports			  [1, 3]
+	  Position		  [475, 350, 550, 410]
+	  BackgroundColor	  "gray"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskType		  "CSO Typ B - Combined sewer overflow"
+	  MaskDescription	  "Combined sewer overflow structure. \nDivert"
+"s the inflow given into effluent and overflow. The model implemented consider"
+"es hydraulics and pollutant routing by full mixing in the structure. \n\nIn a"
+"ddition to Type A a retenetion/sedimentation factor is introduced. The factor"
+" may be used for applying different ratios in pollutant concentration for eff"
+"luent flow (QE) and overflow (QW).\n\nFunction used:\nCD1_sfun_cso_B.m"
+	  MaskPromptString	  "Basin Volume (m3)|Maximum Effluent flow [m3"
+"/s]|Number of Pollutants [-]|n-sed (Vect. of Sed. Coefficients)"
+	  MaskStyleString	  "edit,edit,edit,edit"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on"
+	  MaskVarAliasString	  ",,,"
+	  MaskVariables		  "Vmax=@1;Qemax=@2;n_comp=@3;n_sed=@4;"
+	  MaskInitialization	  "% reading the toplevel systems' name \n% --"
+"> Plant file name;\ntls=bdroot(gcb); \n% Obtaining the fixed sampling time\nt"
+"_samp_char=get_param(tls, 'FixedStep');\n% Convertion to numeric value\ntstep"
+" = str2num(t_samp_char); "
+	  MaskDisplay		  "\nplot(0,0,100,100);\n\n\ntext(50,60,'CSO',"
+"'HorizontalAlignment','center');\ntext(50,30,'Typ B','HorizontalAlignment','c"
+"enter');\n\n\nport_label('input',1,'Qi');\nport_label('output',1,'Qw');\nport"
+"_label('output',2,'Qe');\nport_label('output',3,'Vi');\n"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "V|qs|0|[]"
+	  MaskTabNameString	  ",,,"
+	  System {
+	    Name		    "CSO_QC_v1"
+	    Location		    [599, 237, 1253, 748]
+	    Open		    off
+	    ModelBrowserVisibility  on
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In"
+	      Position		      [15, 108, 45, 122]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "CSO FirstFlush1"
+	      Ports		      [1, 1]
+	      Position		      [80, 95, 210, 135]
+	      FunctionName	      "CD1_sfun_cso_B"
+	      Parameters	      "Vmax,Qemax,n_comp,n_sed,tstep"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Ports		      [1, 3]
+	      Position		      [260, 32, 275, 198]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "[ (n_comp+1) (n_comp+1) (n_comp+1)]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Qw"
+	      Position		      [360, 53, 390, 67]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Qe"
+	      Position		      [360, 108, 390, 122]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Vi"
+	      Position		      [360, 163, 390, 177]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "In"
+	      SrcPort		      1
+	      DstBlock		      "CSO FirstFlush1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "CSO FirstFlush1"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "Qw"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "Qe"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      3
+	      DstBlock		      "Vi"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  Position		  [350, 131, 435, 189]
+	  Gain			  "(1-phiinf)"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain1"
+	  Position		  [345, 351, 430, 409]
+	  Gain			  "phiinf"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain2"
+	  Position		  [150, 260, 250, 320]
+	  Gain			  "10./tstep.*Ared"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain3"
+	  Position		  [625, 435, 725, 495]
+	  Gain			  "tstep./10./Ared"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain4"
+	  Position		  [635, 235, 735, 295]
+	  Gain			  "tstep./10./Ared"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [2, 1]
+	  Position		  [565, 245, 605, 285]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace1"
+	  Position		  [480, 499, 540, 531]
+	  BackgroundColor	  "cyan"
+	  VariableName		  "qin2"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace2"
+	  Position		  [665, 119, 725, 151]
+	  BackgroundColor	  "cyan"
+	  VariableName		  "qouttot"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace3"
+	  Position		  [490, 94, 550, 126]
+	  BackgroundColor	  "cyan"
+	  VariableName		  "qin1"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace4"
+	  Position		  [660, 384, 720, 416]
+	  BackgroundColor	  "cyan"
+	  VariableName		  "qouts"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace5"
+	  Position		  [660, 324, 720, 356]
+	  BackgroundColor	  "cyan"
+	  VariableName		  "qoutw"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "rw [mm/DT]"
+	  Position		  [760, 258, 790, 272]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "rinf [mm/DT]"
+	  Position		  [750, 458, 780, 472]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "rin[mm/DT]"
+	  SrcPort		  1
+	  DstBlock		  "Gain2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain2"
+	  SrcPort		  1
+	  Points		  [55, 0]
+	  Branch {
+	    Points		    [0, 90]
+	    DstBlock		    "Gain1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -130]
+	    DstBlock		    "Gain"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Gain1"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    DstBlock		    "CSO_QC_v1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 135]
+	    DstBlock		    "To Workspace1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Gain3"
+	  SrcPort		  1
+	  DstBlock		  "rinf [mm/DT]"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "CSO_QC_v1"
+	  SrcPort		  2
+	  Points		  [30, 0; 0, 20]
+	  Branch {
+	    Points		    [0, 65]
+	    DstBlock		    "Gain3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "To Workspace4"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "CSO_QC_v1"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, -25]
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 5]
+	    DstBlock		    "To Workspace5"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  Branch {
+	    Points		    [65, 0; 0, 105]
+	    DstBlock		    "Sum"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -50]
+	    DstBlock		    "To Workspace3"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "Gain4"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -130]
+	    DstBlock		    "To Workspace2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Gain4"
+	  SrcPort		  1
+	  DstBlock		  "rw [mm/DT]"
+	  DstPort		  1
+	}
+	Annotation {
+	  Name			  "qr[m3/s]"
+	  Position		  [280, 307]
+	  UseDisplayTextAsClickCallback	off
+	}
+	Annotation {
+	  Name			  "Infiltration stream"
+	  Position		  [385, 462]
+	  UseDisplayTextAsClickCallback	off
+	}
+	Annotation {
+	  Name			  "Non-Infiltration stream"
+	  Position		  [375, 102]
+	  UseDisplayTextAsClickCallback	off
+	}
+	Annotation {
+	  Name			  "qs [m3/s]"
+	  Position		  [590, 487]
+	  UseDisplayTextAsClickCallback	off
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Rainread"
+      Ports		      [0, 1]
+      Position		      [125, 289, 220, 341]
+      BackgroundColor	      "orange"
+      ShowPortLabels	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      MaskType		      "Rain Read"
+      MaskDescription	      "Read raindata from ASCII File in following form"
+"ats:\n\n*.ixx ... Format used by the Austrian Hydrographic Service.\n*.km2 .."
+". Format used in the Mouse Software from DHI (Danish Hydraulic Institute)\n*."
+"mse ... modified mse format used in  Mouse Software from DHI (Danish Hydrauli"
+"c Institute)\n\nUsed function: CD1_mfun_rainread.m"
+      MaskPromptString	      "Filename|Cylic repitition"
+      MaskStyleString	      "edit,checkbox"
+      MaskTunableValueString  "on,on"
+      MaskCallbackString      "|"
+      MaskEnableString	      "on,on"
+      MaskVisibilityString    "on,on"
+      MaskToolTipString	      "on,on"
+      MaskVarAliasString      ","
+      MaskVariables	      "table0=@1;crep=&2;"
+      MaskInitialization      "% cache table size set to 1000\n%table=zeros(10"
+"00,2)\n[table,tablestep]=CD1_mfun_rainread(table0);\n\n% reading the toplevel"
+" systems' name \n% --> Plant file name;\ntls=bdroot(gcb); \n% Obtaining the f"
+"ixed sampling time\nt_samp_char=get_param(tls, 'FixedStep');\n% Convertion to"
+" numeric value\ntstep = str2num(t_samp_char); \n"
+      MaskDisplay	      "plot(0,0,100,100);\n\ntext(40,40,'RAIN READ');"
+"\nplot(\n[5 10 10 15 15 20 20 25 25 30 30 40 40 45],\n[0 0 20 20 40 40 60 60 "
+"30 30 0 0 0 0]+20);\n"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "'test2.km2'|off"
+      MaskTabNameString	      ","
+      System {
+	Name			"Rainread"
+	Location		[755, 519, 1237, 653]
+	Open			off
+	ModelBrowserVisibility	on
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "rainread"
+	  Ports			  [0, 1]
+	  Position		  [45, 54, 170, 86]
+	  FunctionName		  "CD1_sfun_rainread"
+	  Parameters		  "crep,table,tablestep,tstep"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "out_1"
+	  Position		  [250, 60, 270, 80]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "rainread"
+	  SrcPort		  1
+	  DstBlock		  "out_1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace"
+      Position		      [265, 204, 325, 236]
+      BackgroundColor	      "cyan"
+      VariableName	      "rin"
+      MaxDataPoints	      "inf"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace1"
+      Position		      [455, 254, 515, 286]
+      BackgroundColor	      "cyan"
+      VariableName	      "rw"
+      MaxDataPoints	      "inf"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace2"
+      Position		      [455, 344, 515, 376]
+      BackgroundColor	      "cyan"
+      VariableName	      "rinf"
+      MaxDataPoints	      "inf"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Line {
+      SrcBlock		      "Infiltration"
+      SrcPort		      1
+      Points		      [15, 0; 0, -25]
+      DstBlock		      "To Workspace1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Infiltration"
+      SrcPort		      2
+      Points		      [15, 0; 0, 25]
+      DstBlock		      "To Workspace2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Rainread"
+      SrcPort		      1
+      Points		      [20, 0]
+      Branch {
+	DstBlock		"Infiltration"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -95]
+	DstBlock		"To Workspace"
+	DstPort			1
+      }
+    }
+    Annotation {
+      Name		      "to Catchmentblock"
+      Position		      [541, 265]
+      HorizontalAlignment     "left"
+      UseDisplayTextAsClickCallback off
+    }
+    Annotation {
+      Name		      "Infiltrated"
+      Position		      [541, 360]
+      HorizontalAlignment     "left"
+      UseDisplayTextAsClickCallback off
+    }
+    Annotation {
+      Name		      "Surface flow / not infiltrated part"
+      Position		      [541, 280]
+      HorizontalAlignment     "left"
+      UseDisplayTextAsClickCallback off
+    }
+  }
+}
